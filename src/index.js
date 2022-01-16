@@ -5,7 +5,7 @@ import Pages from './pages';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://pioid-catstronauts-server.herokuapp.com',
+  uri: `${process.env.REACT_APP_API_URL}`,
   cache: new InMemoryCache(),
 });
 
