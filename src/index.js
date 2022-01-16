@@ -5,7 +5,7 @@ import Pages from './pages';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: `${process.env.REACT_APP_API_URL}`,
+  uri: `${process.env.REACT_APP_API_URL || 'http://localhost:4000'}`,
   cache: new InMemoryCache(),
 });
 
